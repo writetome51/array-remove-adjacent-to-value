@@ -1,0 +1,1 @@
+Array-handling function that removes items adjacent to (or near) a given value.
