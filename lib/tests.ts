@@ -27,8 +27,8 @@ try {
 catch (e) {
 	errorTriggered = true;
 }
-if (errorTriggered) console.log('test 5 passed');
-else console.log('test 5 failed');
+if (errorTriggered) console.log('test 3 passed');
+else console.log('test 3 failed');
 
 
 errorTriggered = false;
@@ -39,8 +39,8 @@ try {
 catch (e) {
 	errorTriggered = true;
 }
-if (errorTriggered) console.log('test 6 passed');
-else console.log('test 6 failed');
+if (errorTriggered) console.log('test 4 passed');
+else console.log('test 4 failed');
 
 
 errorTriggered = false;
@@ -50,8 +50,8 @@ try {
 catch (e) {
 	errorTriggered = true;
 }
-if (errorTriggered) console.log('test 7 passed');
-else console.log('test 7 failed');
+if (errorTriggered) console.log('test 5 passed');
+else console.log('test 5 failed');
 
 
 errorTriggered = false;
@@ -61,5 +61,5 @@ try {
 catch (e) {
 	errorTriggered = true;
 }
-if (errorTriggered) console.log('test 8 passed');
-else console.log('test 8 failed');
+if (errorTriggered) console.log('test 6 passed');
+else console.log('test 6 failed');

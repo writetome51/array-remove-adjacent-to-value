@@ -16,7 +16,10 @@
   "homepage": "https://github.com/writetome51/array-remove-adjacent-to-value#readme",
   "keywords": [
     "array",
-    "manipulation"
+    "manipulation",
+    "remove",
+    "adjacent",
+    "items"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
@@ -24,7 +27,7 @@
     "@writetome51/arrays-match": "1.0.2"
   },
   "dependencies": {
-    "@writetome51/array-get-and-remove-adjacent-to-value": "latest",
-    "@writetome51/adjacent-to-value-info-interface": "latest"
+    "@writetome51/array-get-and-remove-adjacent-to-value": "1.0.4",
+    "@writetome51/adjacent-to-value-info-interface": "1.0.2"
   }
 }
