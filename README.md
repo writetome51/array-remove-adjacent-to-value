@@ -1,26 +1,29 @@
 To include in your project:
 
-import {removeAdjacentToValue} from '@writetome51/array-remove-adjacent-to-value';
+`import {removeAdjacentToValue} from '@writetome51/array-remove-adjacent-to-value';`
 
-removeAdjacentToValue(info, array) : void 
+    removeAdjacentToValue(info, array) : void 
 
-info = {value: anyExceptObject, offset: integer, howMany: integer greater than zero}
+    info = {  
+        value: any except object (the value to search for),  
+        offset: integer (indicates where, in relation to value, to begin removing items),  
+        howMany: integer greater than zero (how many items to remove)  
+    }
 
-This function removes and returns adjacent items from the passed array,  
-starting with, or close to, info.value.
+This function removes adjacent items from the passed array,  
+starting with, or close to, info.value.  The operation only applies to  
+the first found instance of of info.value  
 
-Example of usage:
+Examples of usage:
 
-let arrayToModify = [1,3,5,7,9,11,13,15,17];  
-let result = removeAdjacentToValue({value: 7, offset: 0, howMany: 3},  arrayToModify);  
-result will contain [7, 9, 11] .  
-arrayToModify will be left as [1,3,5,13,15,17].  
-(If offset was 2, for example, result would contain [11, 13, 15])
+    let arrayToModify = [1,3,5,7,9,11,13,15,17];  
+    removeAdjacentToValue({value: 7, offset: 0, howMany: 3},  arrayToModify);  
+    // items that get removed are [7, 9, 11] .  
+    // If offset was 2, for example, removed items would be [11, 13, 15]   
+    // arrayToModify will be left as [1,3,5,13,15,17].  
 
 
-More examples:
-
-let arrayToModify = [1,3,5,7,9,11,13,15,17];  
-let result = getAndRemoveAdjacentToValue({value: 13, offset: -2, howMany: 4},  arrayToModify);  
-result will contain [9, 11, 13, 15] .  
-arrayToModify will be left as [1,3,5,7,17].
+    let arrayToModify = [1,3,5,7,9,11,13,15,17];  
+    removeAdjacentToValue({value: 13, offset: -2, howMany: 4},  arrayToModify);  
+    // items that get removed are [9, 11, 13, 15] .  
+    // arrayToModify will be left as [1,3,5,7,17] .

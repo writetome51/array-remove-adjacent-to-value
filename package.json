@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-remove-adjacent-to-value",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Array-handling function that removes items adjacent to (or near) a given value.",
   "main": "index.js",
   "scripts": {
@@ -24,10 +24,10 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "devDependencies": {
-    "@writetome51/arrays-match": "1.0.2"
+    "@writetome51/arrays-match": "~1.0.2"
   },
   "dependencies": {
-    "@writetome51/array-get-and-remove-adjacent-to-value": "1.0.4",
-    "@writetome51/adjacent-to-value-info-interface": "1.0.2"
+    "@writetome51/array-get-and-remove-adjacent-to-value": "~1.0.4",
+    "@writetome51/adjacent-to-value-info-interface": "~1.0.2"
   }
 }
