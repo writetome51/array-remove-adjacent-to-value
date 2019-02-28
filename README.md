@@ -1,29 +1,52 @@
-To include in your project:
+## removeAdjacentToValue(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: anyExceptObject,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset: integer,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;howMany: integer_greater_than_zero<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): void
 
-`import {removeAdjacentToValue} from '@writetome51/array-remove-adjacent-to-value';`
+Removes `howMany` adjacent items from `array`, starting with, or  
+close to, `value`.  Exactly where removal begins is decided by `offset`,  
+which is the position, relative to `value`, where to begin removing.  
+For example, if `offset` is 0, then removal begins at `value`.  If -1,  
+it begins one place to the left of `value`.  If 1, it begins one place to the  
+right.  
 
-    removeAdjacentToValue(info, array) : void 
+Note: the function only works with the first found instance of `value`.
 
-    info = {  
-        value: any except object (the value to search for),  
-        offset: integer (indicates where, in relation to value, to begin removing items),  
-        howMany: integer greater than zero (how many items to remove)  
-    }
-
-This function removes adjacent items from the passed array,  
-starting with, or close to, info.value.  The operation only applies to  
-the first found instance of of info.value  
-
-Examples of usage:
-
-    let arrayToModify = [1,3,5,7,9,11,13,15,17];  
-    removeAdjacentToValue({value: 7, offset: 0, howMany: 3},  arrayToModify);  
-    // items that get removed are [7, 9, 11] .  
-    // If offset was 2, for example, removed items would be [11, 13, 15]   
-    // arrayToModify will be left as [1,3,5,13,15,17].  
+### Examples
+```
+let array = [1,3,5,7,9,11,13,15,17];  
+removeAdjacentToValue(
+    {value: 11, offset: 0, howMany: 3},  
+    array
+);  
+// items that get removed are [11,13,15] .  
+// array is now [1,3,5,7,9,17].  
 
 
-    let arrayToModify = [1,3,5,7,9,11,13,15,17];  
-    removeAdjacentToValue({value: 13, offset: -2, howMany: 4},  arrayToModify);  
-    // items that get removed are [9, 11, 13, 15] .  
-    // arrayToModify will be left as [1,3,5,7,17] .
+let array = [1,3,5,7,9,11,13,15,17];  
+removeAdjacentToValue(
+    {value: 11, offset: -2, howMany: 4}, 
+    array
+);  
+// items that get removed are [7,9,11,13] .  
+// array is now [1,3,5,15,17] .
+
+
+let array = [1,3,5,7,9,11,13,15,17];  
+removeAdjacentToValue(
+    {value: 11, offset: 2, howMany: 2}, 
+    array
+);  
+// items that get removed are [15,17] .  
+// array is now [1,3,5,7,9,11,13] .
+```
+
+### Installation
+`npm i  @writetome51/array-remove-adjacent-to-value`
+ 
+    
+### Loading
+```
+// if using TypeScript:
+import {removeAdjacentToValue} from '@writetome51/array-remove-adjacent-to-value';
+// if using ES5 JavaScript:
+var removeAdjacentToValue = 
+    require('@writetome51/array-remove-adjacent-to-value').removeAdjacentToValue;
+```

@@ -1,4 +1,4 @@
-import { removeAdjacentToValue } from './removeAdjacentToValue';
+import { removeAdjacentToValue } from './index';
 import { arraysMatch } from '@writetome51/arrays-match';
 
 
