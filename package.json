@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-remove-adjacent-to-value",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Array-handling function that removes items adjacent to (or near) a given value.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
